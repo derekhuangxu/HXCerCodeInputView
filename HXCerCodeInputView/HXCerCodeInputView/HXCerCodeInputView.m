@@ -86,9 +86,8 @@ static const NSUInteger tag_base = 20;//tag基础值
  @param textField 接收输入
  */
 - (void)valueChange:(UITextField *)textField {
-    NSLog(@"当前输入框文字:");
-    NSString *string = textField.text;
     
+    NSString *string = textField.text;
     for (int i = 0; i <= self.verCodeNum; i++) {
         UILabel *label = [self viewWithTag:tag_base + i];
         if (i < string.length) {
@@ -97,9 +96,7 @@ static const NSUInteger tag_base = 20;//tag基础值
 
                 } else {
                     label.text = [string substringWithRange:NSMakeRange(string.length - 1, 1)];
-//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        label.text = @"*";
-//                    });
+                    label.text = @"*";
                 }
             } else {
                 label.text = [string substringWithRange:NSMakeRange(i, 1)];
@@ -120,7 +117,6 @@ static const NSUInteger tag_base = 20;//tag基础值
  清空键盘
  */
 - (void)clearInput {
-    NSLog(@"清除所有输入数据");
     for (int i = 0; i <= self.verCodeNum; i++) {
         UILabel *label = [self viewWithTag:tag_base + i];
         label.text = @"";

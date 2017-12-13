@@ -35,9 +35,7 @@
     clearBtn.backgroundColor = [UIColor blueColor];
     clearBtn.tintColor = [UIColor yellowColor];
     [clearBtn addTarget:inputView action:@selector(clearInput) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:clearBtn];
-    
-    
+    [self.view addSubview:clearBtn];    
 }
 
 

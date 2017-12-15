@@ -9,6 +9,7 @@
 #import "HXCerCodeInputView.h"
 
 static const NSUInteger tag_base = 20;//tag基础值
+static const NSUInteger line_tag_base = 100;//tag基础值
 
 
 @interface HXCerCodeInputView ()<UITextFieldDelegate>
@@ -47,15 +48,18 @@ static const NSUInteger tag_base = 20;//tag基础值
     for (int i = 0; i< self.verCodeNum; i++) {
         UILabel *label = [UILabel new];
         label.backgroundColor = [UIColor whiteColor];
-        label.layer.cornerRadius = 2.f;
-        label.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
-        label.layer.borderWidth = 0.5f;
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor blackColor];
         label.tag = tag_base + i;
         label.frame = CGRectMake((lineSpacing + labelWidth) * i, 0, labelWidth, labelHeight);
         [self addSubview:label];
+        UIView *lineView = [UIView new];
+        lineView.backgroundColor = [UIColor blueColor];
+        lineView.tag = line_tag_base + i;
+        lineView.frame = CGRectMake((lineSpacing + labelWidth) * i, labelHeight, labelWidth, 1);
+        [self addSubview:lineView];
     }
+
     self.useTextField = [[UITextField alloc] init];
     self.useTextField.textColor = [UIColor clearColor];
     self.useTextField.backgroundColor = [UIColor clearColor];
@@ -65,6 +69,10 @@ static const NSUInteger tag_base = 20;//tag基础值
     self.useTextField.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self.useTextField addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventEditingChanged];
     [self addSubview:self.useTextField];
+    
+    UIView *lineView = [self viewWithTag:line_tag_base];
+    lineView.backgroundColor = [UIColor redColor];
+    
     [self.useTextField becomeFirstResponder];
     
 }
@@ -90,6 +98,13 @@ static const NSUInteger tag_base = 20;//tag基础值
     NSString *string = textField.text;
     for (int i = 0; i <= self.verCodeNum; i++) {
         UILabel *label = [self viewWithTag:tag_base + i];
+        UIView *lineView = [self viewWithTag:line_tag_base + i];
+        if ((lineView.tag - line_tag_base) == string.length) {
+            lineView.backgroundColor = [UIColor redColor];
+        } else {
+            lineView.backgroundColor = [UIColor blueColor];
+        }
+
         if (i < string.length) {
             if (self.isCodeSecure) {
                 if ([label.text isEqualToString:@"*"] || [label.text isEqualToString:[string substringWithRange:NSMakeRange(i, 1)]]) {
@@ -104,7 +119,9 @@ static const NSUInteger tag_base = 20;//tag基础值
         } else {
             label.text = @"";
         }
+        
     }
+    
     if (textField.text.length == self.verCodeNum) {
         if (self.inputFinishedBlock) {
             self.inputFinishedBlock(textField.text);
@@ -122,6 +139,15 @@ static const NSUInteger tag_base = 20;//tag基础值
         label.text = @"";
     }
     self.useTextField.text = @"";
+    for (int i = 0; i <= self.verCodeNum; i++) {
+        UIView *lineView = [self viewWithTag:line_tag_base + i];
+        if ((lineView.tag - line_tag_base) == 0) {
+            lineView.backgroundColor = [UIColor redColor];
+        } else {
+            lineView.backgroundColor = [UIColor blueColor];
+        }
+        
+    }
 }
 
 #pragma mark - 键盘代理：验证字符、处理字符长度

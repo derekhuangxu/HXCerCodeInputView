@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HXCerCodeInputView/ViewController.m"
-            timestampString = "534849735.973574"
+            timestampString = "535008487.72465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -36,13 +36,21 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HXCerCodeInputView/HXCerCodeInputView.m"
-            timestampString = "534849735.973956"
+            timestampString = "535008487.725007"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-valueChange:"
             landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po [string substringWithRange:NSMakeRange(i, 1)]">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

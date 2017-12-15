@@ -24,7 +24,7 @@
     HXCerCodeInputView *inputView = [[HXCerCodeInputView alloc] initWithFrame:CGRectMake(48.f, 100.f, self.view.bounds.size.width - 48.f * 2, 37.f)
                                                                    verCodeNum:6
                                                               inputFieldWidth:27.f
-                                                                     isSecure:YES];
+                                                                     isSecure:NO];
     inputView.inputFinishedBlock = ^(NSString *inputCode) {
         NSLog(@"%@",inputCode);
     };

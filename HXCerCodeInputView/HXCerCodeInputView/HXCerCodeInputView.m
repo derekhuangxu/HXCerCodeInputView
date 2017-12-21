@@ -19,6 +19,8 @@ static const NSUInteger line_tag_base = 100;//tag基础值
 @property (assign, nonatomic) NSInteger inputFieldWidth;
 
 @property (strong, nonatomic) UITextField *useTextField;
+@property (strong, nonatomic) UIView *activeLine;
+@property (weak, nonatomic) NSTimer *timer;
 
 @end
 
@@ -72,9 +74,10 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     
     UIView *lineView = [self viewWithTag:line_tag_base];
     lineView.backgroundColor = [UIColor redColor];
-    
+    self.activeLine = lineView;
     [self.useTextField becomeFirstResponder];
-    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateLineView:) userInfo:nil repeats:YES];
+
 }
 
 - (void)checkPamameters {
@@ -100,7 +103,8 @@ static const NSUInteger line_tag_base = 100;//tag基础值
         UILabel *label = [self viewWithTag:tag_base + i];
         UIView *lineView = [self viewWithTag:line_tag_base + i];
         if ((lineView.tag - line_tag_base) == string.length) {
-            lineView.backgroundColor = [UIColor redColor];
+//            lineView.backgroundColor = [UIColor redColor];
+            self.activeLine = lineView;
         } else {
             lineView.backgroundColor = [UIColor blueColor];
         }
@@ -142,11 +146,12 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     for (int i = 0; i <= self.verCodeNum; i++) {
         UIView *lineView = [self viewWithTag:line_tag_base + i];
         if ((lineView.tag - line_tag_base) == 0) {
-            lineView.backgroundColor = [UIColor redColor];
+//            lineView.backgroundColor = [UIColor redColor];
+            self.activeLine = lineView;
+
         } else {
             lineView.backgroundColor = [UIColor blueColor];
         }
-        
     }
 }
 
@@ -174,6 +179,15 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     return res;
 }
 
+- (void)updateLineView:(NSTimer *)timer {
+    
+    if (self.activeLine.backgroundColor == [UIColor blueColor]) {
+        self.activeLine.backgroundColor = [UIColor redColor];
+    } else {
+        self.activeLine.backgroundColor = [UIColor blueColor];
+    }
+    
+}
 
 
 @end

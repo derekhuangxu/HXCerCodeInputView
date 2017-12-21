@@ -55,7 +55,6 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     }
 }
 
-
 - (void)createUI {
     [self checkPamameters];
 
@@ -119,7 +118,6 @@ static const NSUInteger line_tag_base = 100;//tag基础值
         UILabel *label = [self viewWithTag:tag_base + i];
         UIView *lineView = [self viewWithTag:line_tag_base + i];
         if ((lineView.tag - line_tag_base) == string.length) {
-//            lineView.backgroundColor = [UIColor redColor];
             self.activeLine = lineView;
         } else {
             lineView.backgroundColor = [UIColor blueColor];
@@ -162,9 +160,7 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     for (int i = 0; i <= self.verCodeNum; i++) {
         UIView *lineView = [self viewWithTag:line_tag_base + i];
         if ((lineView.tag - line_tag_base) == 0) {
-//            lineView.backgroundColor = [UIColor redColor];
             self.activeLine = lineView;
-
         } else {
             lineView.backgroundColor = [UIColor blueColor];
         }

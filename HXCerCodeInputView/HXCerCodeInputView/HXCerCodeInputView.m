@@ -39,6 +39,23 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     return self;
 }
 
+- (void)dealloc
+{
+    @try {
+        if(self.timer){
+            [self.timer invalidate];
+            self.timer = nil;
+        }
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+}
+
+
 - (void)createUI {
     [self checkPamameters];
 
@@ -75,7 +92,6 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     UIView *lineView = [self viewWithTag:line_tag_base];
     lineView.backgroundColor = [UIColor redColor];
     self.activeLine = lineView;
-    [self.useTextField becomeFirstResponder];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateLineView:) userInfo:nil repeats:YES];
 
 }
@@ -186,7 +202,11 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     } else {
         self.activeLine.backgroundColor = [UIColor blueColor];
     }
+}
+
+- (void)captchaInputViewBecomeActive {
     
+    [self.useTextField becomeFirstResponder];
 }
 
 

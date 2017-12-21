@@ -32,6 +32,11 @@ typedef void(^cerCodeInputFinished)(NSString *inputCode);
 - (void)clearInput;
 
 /**
+ 键盘相应验证码输入控件
+ */
+- (void)captchaInputViewBecomeActive;
+
+/**
  输入数字达到限制后执行的回调
  */
 @property (copy, nonatomic) cerCodeInputFinished inputFinishedBlock;

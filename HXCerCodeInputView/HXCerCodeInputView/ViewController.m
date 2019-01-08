@@ -22,9 +22,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     HXCerCodeInputView *inputView = [[HXCerCodeInputView alloc] initWithFrame:CGRectMake(48.f, 100.f, self.view.bounds.size.width - 48.f * 2, 37.f)
-                                                                   verCodeNum:6
+                                                                   verCodeNum:4
                                                               inputFieldWidth:27.f
-                                                                     isSecure:NO];
+                                                                     isSecure:YES];
     inputView.inputFinishedBlock = ^(NSString *inputCode) {
         NSLog(@"%@",inputCode);
     };

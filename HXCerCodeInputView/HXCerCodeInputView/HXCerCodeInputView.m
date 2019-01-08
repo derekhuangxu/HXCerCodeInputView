@@ -99,7 +99,7 @@ static const NSUInteger line_tag_base = 100;//tag基础值
     
     NSParameterAssert(self.verCodeNum);
     NSParameterAssert(self.inputFieldWidth);
-    NSAssert(self.verCodeNum > 4, @"至少需要4个需要输入的验证码");
+    NSAssert(self.verCodeNum >= 4, @"至少需要4个需要输入的验证码");
     NSAssert(self.inputFieldWidth > 20.f, @"请增大输入框宽度");
     NSAssert((self.inputFieldWidth * self.verCodeNum) < self.frame.size.width, @"请减小输入框宽度或者增大View的宽度");
 }

@@ -84,8 +84,8 @@
 		482CF6E922688FA900477046 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				482CF6EA22688FA900477046 /* HXCerCodeInputView.m */,
 				482CF6EB22688FA900477046 /* HXCerCodeInputView.h */,
+				482CF6EA22688FA900477046 /* HXCerCodeInputView.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

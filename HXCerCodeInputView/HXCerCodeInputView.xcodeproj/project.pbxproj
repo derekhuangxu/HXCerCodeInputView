@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		482CF6E422688A4100477046 /* HXCerCodeInputView in Resources */ = {isa = PBXBuildFile; fileRef = 482CF6E322688A4100477046 /* HXCerCodeInputView */; };
+		482CF6EC22688FA900477046 /* HXCerCodeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482CF6EA22688FA900477046 /* HXCerCodeInputView.m */; };
 		65CD45A71FE10F35008B1FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45A61FE10F35008B1FB8 /* AppDelegate.m */; };
 		65CD45AA1FE10F35008B1FB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45A91FE10F35008B1FB8 /* ViewController.m */; };
 		65CD45AD1FE10F35008B1FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65CD45AB1FE10F35008B1FB8 /* Main.storyboard */; };
@@ -36,7 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		482CF6E322688A4100477046 /* HXCerCodeInputView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HXCerCodeInputView; sourceTree = "<group>"; };
+		482CF6EA22688FA900477046 /* HXCerCodeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCerCodeInputView.m; sourceTree = "<group>"; };
+		482CF6EB22688FA900477046 /* HXCerCodeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCerCodeInputView.h; sourceTree = "<group>"; };
 		65CD45A21FE10F35008B1FB8 /* HXCerCodeInputView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXCerCodeInputView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CD45A51FE10F35008B1FB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65CD45A61FE10F35008B1FB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		482CF6E922688FA900477046 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				482CF6EA22688FA900477046 /* HXCerCodeInputView.m */,
+				482CF6EB22688FA900477046 /* HXCerCodeInputView.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		65CD45991FE10F35008B1FB8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +113,7 @@
 		65CD45A41FE10F35008B1FB8 /* HXCerCodeInputView */ = {
 			isa = PBXGroup;
 			children = (
-				482CF6E322688A4100477046 /* HXCerCodeInputView */,
+				482CF6E922688FA900477046 /* Sources */,
 				65CD45A51FE10F35008B1FB8 /* AppDelegate.h */,
 				65CD45A61FE10F35008B1FB8 /* AppDelegate.m */,
 				65CD45A81FE10F35008B1FB8 /* ViewController.h */,
@@ -197,7 +207,7 @@
 		65CD459A1FE10F35008B1FB8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Derek;
 				TargetAttributes = {
 					65CD45A11FE10F35008B1FB8 = {
@@ -243,7 +253,6 @@
 			files = (
 				65CD45B21FE10F35008B1FB8 /* LaunchScreen.storyboard in Resources */,
 				65CD45AF1FE10F35008B1FB8 /* Assets.xcassets in Resources */,
-				482CF6E422688A4100477046 /* HXCerCodeInputView in Resources */,
 				65CD45AD1FE10F35008B1FB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +281,7 @@
 				65CD45AA1FE10F35008B1FB8 /* ViewController.m in Sources */,
 				65CD45B51FE10F35008B1FB8 /* main.m in Sources */,
 				65CD45A71FE10F35008B1FB8 /* AppDelegate.m in Sources */,
+				482CF6EC22688FA900477046 /* HXCerCodeInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +350,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -347,6 +358,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -395,6 +407,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -402,6 +415,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

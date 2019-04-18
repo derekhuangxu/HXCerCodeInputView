@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482CF6E422688A4100477046 /* HXCerCodeInputView in Resources */ = {isa = PBXBuildFile; fileRef = 482CF6E322688A4100477046 /* HXCerCodeInputView */; };
 		65CD45A71FE10F35008B1FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45A61FE10F35008B1FB8 /* AppDelegate.m */; };
 		65CD45AA1FE10F35008B1FB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45A91FE10F35008B1FB8 /* ViewController.m */; };
 		65CD45AD1FE10F35008B1FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65CD45AB1FE10F35008B1FB8 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		65CD45B51FE10F35008B1FB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45B41FE10F35008B1FB8 /* main.m */; };
 		65CD45BF1FE10F35008B1FB8 /* HXCerCodeInputViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45BE1FE10F35008B1FB8 /* HXCerCodeInputViewTests.m */; };
 		65CD45CA1FE10F35008B1FB8 /* HXCerCodeInputViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45C91FE10F35008B1FB8 /* HXCerCodeInputViewUITests.m */; };
-		65CD45D91FE10F68008B1FB8 /* HXCerCodeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CD45D81FE10F68008B1FB8 /* HXCerCodeInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		482CF6E322688A4100477046 /* HXCerCodeInputView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HXCerCodeInputView; sourceTree = "<group>"; };
 		65CD45A21FE10F35008B1FB8 /* HXCerCodeInputView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXCerCodeInputView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CD45A51FE10F35008B1FB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65CD45A61FE10F35008B1FB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +53,6 @@
 		65CD45C51FE10F35008B1FB8 /* HXCerCodeInputViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXCerCodeInputViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CD45C91FE10F35008B1FB8 /* HXCerCodeInputViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCerCodeInputViewUITests.m; sourceTree = "<group>"; };
 		65CD45CB1FE10F35008B1FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65CD45D71FE10F68008B1FB8 /* HXCerCodeInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXCerCodeInputView.h; sourceTree = "<group>"; };
-		65CD45D81FE10F68008B1FB8 /* HXCerCodeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCerCodeInputView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +103,7 @@
 		65CD45A41FE10F35008B1FB8 /* HXCerCodeInputView */ = {
 			isa = PBXGroup;
 			children = (
+				482CF6E322688A4100477046 /* HXCerCodeInputView */,
 				65CD45A51FE10F35008B1FB8 /* AppDelegate.h */,
 				65CD45A61FE10F35008B1FB8 /* AppDelegate.m */,
 				65CD45A81FE10F35008B1FB8 /* ViewController.h */,
@@ -113,8 +113,6 @@
 				65CD45B01FE10F35008B1FB8 /* LaunchScreen.storyboard */,
 				65CD45B31FE10F35008B1FB8 /* Info.plist */,
 				65CD45B41FE10F35008B1FB8 /* main.m */,
-				65CD45D71FE10F68008B1FB8 /* HXCerCodeInputView.h */,
-				65CD45D81FE10F68008B1FB8 /* HXCerCodeInputView.m */,
 			);
 			path = HXCerCodeInputView;
 			sourceTree = "<group>";
@@ -245,6 +243,7 @@
 			files = (
 				65CD45B21FE10F35008B1FB8 /* LaunchScreen.storyboard in Resources */,
 				65CD45AF1FE10F35008B1FB8 /* Assets.xcassets in Resources */,
+				482CF6E422688A4100477046 /* HXCerCodeInputView in Resources */,
 				65CD45AD1FE10F35008B1FB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +272,6 @@
 				65CD45AA1FE10F35008B1FB8 /* ViewController.m in Sources */,
 				65CD45B51FE10F35008B1FB8 /* main.m in Sources */,
 				65CD45A71FE10F35008B1FB8 /* AppDelegate.m in Sources */,
-				65CD45D91FE10F68008B1FB8 /* HXCerCodeInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

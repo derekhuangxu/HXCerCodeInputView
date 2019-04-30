@@ -11,22 +11,15 @@
 
 ## How to use
 
+```
 /**
-
- 初始化输入框
-
+ 初始化输入
  @param frame 输入框的frame
- 
  @param verCodeNum 验证码数量
- 
  @param inputFieldWidth 验证码显示框的宽度
- 
  @param isSecure 是否需要显示加密
- 
  @return 输入框
- 
  */
- 
 - (instancetype)initWithFrame:(CGRect)frame verCodeNum:(NSInteger)verCodeNum inputFieldWidth:(CGFloat)inputFieldWidth isSecure:(BOOL)isSecure;
 
 
@@ -44,7 +37,7 @@
  输入数字达到限制后执行的回调
  */
 @property (copy, nonatomic) cerCodeInputFinished inputFinishedBlock;
-
+```
 
 ## Installation
 

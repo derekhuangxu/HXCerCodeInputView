@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/badge/License-MIT-green.svg)
 ![](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
+![](https://img.shields.io/cocoapods/v/HXCerCodeInputView.svg?style=popout)
 
 
 验证码输入框
